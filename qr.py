@@ -43,20 +43,6 @@ def create_qr_with_logo(data, logo_path, output_file, border_ratio=0.1):
     img.save(output_file)
 
 
-
-# Create a vcf file
-vcf_data = '''BEGIN:VCARD
-VERSION:3.0
-N:Teel;Theresa;;;
-FN:Theresa Teel
-ORG:Morrison Racing Stables
-TEL;TYPE=work,voice:+1-909-239-8232
-TITLE:Bookkeeper
-EMAIL:racing@usamorrison.com
-URL:https://morrisonracing.com
-END:VCARD
-'''
-
 # Create a vcf file
 vcf_data = '''BEGIN:VCARD
 VERSION:3.0
