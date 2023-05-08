@@ -13,8 +13,8 @@ import os
 def create_qr_with_logo(data, logo_path, output_file, border_ratio=0.1):
     qr = qrcode.QRCode(
         version=1,
-        error_correction=qrcode.constants.ERROR_CORRECT_H,
-        box_size=10,
+        error_correction=qrcode.constants.ERROR_CORRECT_Q,  # Change error correction level to Q
+        box_size=12,  # Increase box_size from 10 to 12
         border=4
     )
 
@@ -47,11 +47,24 @@ def create_qr_with_logo(data, logo_path, output_file, border_ratio=0.1):
 # Create a vcf file
 vcf_data = '''BEGIN:VCARD
 VERSION:3.0
+N:Teel;Theresa;;;
+FN:Theresa Teel
+ORG:Morrison Racing Stables
+TEL;TYPE=work,voice:+1-909-239-8232
+TITLE:Bookkeeper
+EMAIL:racing@usamorrison.com
+URL:https://morrisonracing.com
+END:VCARD
+'''
+
+# Create a vcf file
+vcf_data = '''BEGIN:VCARD
+VERSION:3.0
 N:;Smith; Joe;;;
 FN:Joe Smith
 ORG:Company, Inc.
 TITLE:CEO
-TEL;TYPE=work,voice;VALUE=uri:tel:+1-703-555-1212
+TEL;TYPE=work,voice:+1-703-555-1212
 EMAIL:namen@email.com
 URL:https://mycompany.com
 END:VCARD
